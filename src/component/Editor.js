@@ -43,7 +43,10 @@ export default function Editor(props) {
                     mode: language,
                     lineNumber: true,
                     setSpellCheck: true,
-                    theme: 'material'
+                    theme: 'material',
+                    autoClosingBrackets: true,
+                    formatOnType: true,
+                    enableLiveAutocompletion: true
                 }}
             />
         </div>

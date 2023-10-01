@@ -70,6 +70,6 @@ border:none
   
   .e-c-btn:hover {
     animation: rotate360 2s linear infinite; /* Apply the rotate360 animation on hover */
-    transform-origin: center; /* Optional: Set the rotation origin to the center */
+    transform-origin: center; /*Set the rotation origin to the center */
   }
   
