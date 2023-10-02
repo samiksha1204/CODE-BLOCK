@@ -1,0 +1,173 @@
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Default styles for both .left and .right */
+.left,
+.right {
+  width: 50%; /* Set the width to 50% of the container */
+  height: 20%; /* Set the height to 20% of the container */
+  padding: 2px;
+  outline: 0;
+  overflow: visible;
+}
+
+.playground {
+  width: 100%;
+  height: 100vh;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row; /* Default to horizontal layout */
+}
+
+/* Styles for smaller screens (less than 768px) */
+@media (max-width: 767px) {
+  .playground {
+    flex-direction: column; /* Stack elements vertically for smaller screens */
+  }
+
+  .left,
+  .right {
+    height: auto; /* Allow the height to adjust to content */
+    background: none;
+    border-radius: 2px;
+    resize: none;
+  }
+}
+
+.tit{
+  font-size:40px;
+  text-align:center;
+  padding-top:10px;
+  text-decoration: overline underline;
+  font-style: oblique;
+  font-weight: bold;
+
+}
+
+/* Styles for larger screens (greater than or equal to 768px) */
+@media (min-width: 768px) {
+  .left {
+    weight:40%;
+    height: 28%;
+    background: none;
+    border: none;
+    resize: none;
+  }
+
+  .right {
+    weight:40%;
+    height: auto;
+    background: #fff;
+    scroll-behavior: smooth;
+    overflow: visible;
+    
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  margin: 4px;
+  padding: 5px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.refresh-button {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  background: none;
+  cursor: pointer;
+  transition: all 900ms;
+}
+
+.refresh-button:hover {
+  animation: rotate360 2s linear infinite;
+  transform-origin: center;
+}
+
+.save-button {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  background: none;
+  cursor: pointer;
+  transition: all 900ms;
+}
+
+.save-button:hover {
+  animation: rotate360 2s linear infinite;
+  transform-origin: center;
+}
+
+
+.editor-title {
+  display: flex;
+  justify-content: space-between; /* Pushes the button to the right */
+  align-items: center; /* Vertically center-aligns the button */
+  background: black;
+  padding-left: 4px;
+  color: white;
+}
+
+.button-container {
+  text-align: right;
+}
+.e-button {
+  margin-left: 30px;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  background: none;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  transition: all 900ms;
+  text-align: right;
+}
+
+.e-button:hover {
+  animation: rotate360 2s linear infinite;
+  transform-origin: center;
+}
+
+.code-mirror-wrapper {
+  flex-grow: 1;
+  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+  overflow: hidden;
+}
+.editor-container.collapsed {
+  flex-grow: 1;
+  flex-basis:0;
+  weight:40%
+}
+
+.editor-container.collapsed .CodeMirror-scroll {
+  position: absolute;
+  overflow: hidden !important;
+}
+.editor-container {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: hsl(225, 6%, 25%);
+  weight:40%
+  
+}
+
+

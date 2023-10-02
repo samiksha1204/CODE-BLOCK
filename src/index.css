@@ -1,75 +1,18 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+  margin:2;
+  padding:2;
+  box-sizing:border-box;
+  font-family: 'Poppins';
+}
+
 body{
-    margin:2;
+  background:#E7F8A3;
+  color:black;
 
 }
-
-.top-box{
-background-color:#E7F8A3
-}
-
-.box{
-    height:50vh;
-    display:flex;
-
-}
-
-.editor-container{
-    flex-grow:1;
-    flex-basis:0;
-    display:flex;
-    flex-direction:column;
-    padding: 0.5rem;
-    background-color:#E7F8A3
-}
-
-.editor-title{
-    display:flex;
-    justify-content:space-between;
-    background-color:#F3FBD1;
-    color:#050505;
-    padding: 0.5rem;
-    border-radius:5px
-
-}
-
-.codeMirror{
-    height:100%;
-}
-
-.code-mirror-wrapper{
-   overflow:hidden;
-   flex-grow:2;
-   border-radius:4px 
-}
-
-.editor-container.collapsed{
-    flex-grow:0;
-}
-
-.editor-container.collapsed.codeMirror-scroll{
-    position:absolute;
-    overflow:hiddel;
-}
-
-.e-c-btn{
-margin:2px;
-background:none;
-color:#050505;
-cursor:pointer;
-border:none
- }
- @keyframes rotate360 {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  
-  .e-c-btn:hover {
-    animation: rotate360 2s linear infinite; /* Apply the rotate360 animation on hover */
-    transform-origin: center; /*Set the rotation origin to the center */
-  }
-  
