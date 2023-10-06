@@ -12,7 +12,9 @@
 }
 
 body{
-  background:#E7F8A3;
-  color:black;
+  background:#27374D;
+  color:#DDE6ED !important;
+  font-weight: bold !important;
+  font-size: large !important;
 
 }
