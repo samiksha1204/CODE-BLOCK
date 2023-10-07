@@ -11,7 +11,7 @@ import "codemirror/mode/xml/xml";
 import "codemirror/mode/javascript/javascript";
 import "codemirror/mode/css/css";
 import { Controlled as ControlledEditor } from "react-codemirror2";
-import "codemirror/theme/material.css"; 
+import "codemirror/theme/material.css";
 import "codemirror/theme/3024-day.css";
 import "codemirror/theme/3024-night.css";
 import "codemirror/theme/ambiance.css";
@@ -30,8 +30,8 @@ import ThemeSelector from "./ThemeSelector";
 export default function Editor(props) {
   const { language, displayName, value, onChange, N } = props;
   const [selectedTheme, setSelectedTheme] = useState("material");
-  const [themeMenuOpen, setThemeMenuOpen] = useState(false); 
-  const [isFullscreen, setIsFullscreen] = useState(false); 
+  const [themeMenuOpen, setThemeMenuOpen] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   function handleChange(editor, data, value) {
     onChange(value);
@@ -49,7 +49,7 @@ export default function Editor(props) {
 
   const handleThemeChange = (newTheme) => {
     setSelectedTheme(newTheme);
-    setThemeMenuOpen(false); 
+    setThemeMenuOpen(false);
   };
 
   const toggleFullscreen = () => {
@@ -76,8 +76,12 @@ export default function Editor(props) {
     // Add more theme names here...
   ];
 
-  const editorClassName = isFullscreen ? "code-mirror-fullscreen" : "code-mirror-wrapper";
-  const buttonContainerClassName = isFullscreen ? "button-container-fullscreen" : "button-container";
+  const editorClassName = isFullscreen
+    ? "code-mirror-fullscreen"
+    : "code-mirror-wrapper";
+  const buttonContainerClassName = isFullscreen
+    ? "button-container-fullscreen"
+    : "button-container";
 
   return (
     <div className={`editor-container ${isFullscreen ? "collapsed" : ""}`}>
@@ -90,7 +94,7 @@ export default function Editor(props) {
             onClick={toggleFullscreen}
           >
             <FontAwesomeIcon icon={isFullscreen ? faCompress : faExpand} />
-            <span className="pop">{isFullscreen ? 'Compress' : 'Expand'}</span>
+            <span className="pop">{isFullscreen ? "Compress" : "Expand"}</span>
           </button>
           <button
             className="save-button"
@@ -103,7 +107,7 @@ export default function Editor(props) {
           <button
             className="save-button"
             type="button"
-            onClick={toggleThemeMenu} 
+            onClick={toggleThemeMenu}
           >
             <FontAwesomeIcon icon={faGear} />
             <span className="pop">Setting</span>

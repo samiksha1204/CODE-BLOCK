@@ -1,8 +1,8 @@
 import Editor from "./Editor";
 import { useEffect, useState } from "react";
 import Storage from "../hooks/store";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowsRotate, faDownload } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowsRotate, faDownload } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
 import { Controlled as ControlledEditor } from "react-codemirror2";
 
@@ -13,8 +13,6 @@ function App(props) {
   const [srcDoc, setSrcDoc] = useState("");
   const [open, setOpen] = useState(true);
   const { language, displayName, value, onChange, N } = props;
-
-
 
   function handleChange(editor, data, value) {
     onChange(value);
@@ -43,7 +41,7 @@ function App(props) {
   const handleSaveClick = () => {
     // Combine HTML, CSS, and JS into a single content string
     const content = `<html><head><style>${css}</style></head><body>${html}<script>${js}</script></body></html>`;
-    
+
     // Blob with the content
     const blob = new Blob([content], { type: "text/html" });
 
@@ -61,7 +59,6 @@ function App(props) {
   };
 
   return (
-   
     <div className="playground">
       <div className="left">
         <Editor
@@ -87,40 +84,44 @@ function App(props) {
         />
       </div>
       <div className="right">
-      <div className="button-out-cont">
-      <div className="out-text">
-
-    <h1>OUTPUT</h1>
-    <div className="buttons-and-output">
-     
-      <button className="save-button" type='button' onClick={handleSaveClick}>
-        <FontAwesomeIcon icon={faDownload} />
-        <span class="pop">Dowload</span>
-      </button>
-      <button className="save-button" type='button' onClick={handleRefreshClick}>
-        <FontAwesomeIcon icon={open ? faArrowsRotate : faArrowsRotate} />
-        <span class="pop">Refresh</span>
-      </button>
-    </div>
-  </div>
-</div>
-</div>
-<iframe
-  title="output"
-  srcDoc={srcDoc}
-  sandbox="allow-scripts"
-  width="100%"
-  height="100%"
-  style={{
-    borderBottomRightRadius: '.5rem',
-    borderBottomLeftRadius: '.5rem',
-  }}
-/>
-
-
-
+        <div className="button-out-cont">
+          <div className="out-text">
+            <h1>OUTPUT</h1>
+            <div className="buttons-and-output">
+              <button
+                className="save-button"
+                type="button"
+                onClick={handleSaveClick}
+              >
+                <FontAwesomeIcon icon={faDownload} />
+                <span class="pop">Dowload</span>
+              </button>
+              <button
+                className="save-button"
+                type="button"
+                onClick={handleRefreshClick}
+              >
+                <FontAwesomeIcon
+                  icon={open ? faArrowsRotate : faArrowsRotate}
+                />
+                <span class="pop">Refresh</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-  
+      <iframe
+        title="output"
+        srcDoc={srcDoc}
+        sandbox="allow-scripts"
+        width="100%"
+        height="100%"
+        style={{
+          borderBottomRightRadius: ".5rem",
+          borderBottomLeftRadius: ".5rem",
+        }}
+      />
+    </div>
   );
 }
 
