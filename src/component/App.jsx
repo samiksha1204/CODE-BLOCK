@@ -44,13 +44,13 @@ function App(props) {
     // Combine HTML, CSS, and JS into a single content string
     const content = `<html><head><style>${css}</style></head><body>${html}<script>${js}</script></body></html>`;
     
-    // Create a Blob with the content
+    // Blob with the content
     const blob = new Blob([content], { type: "text/html" });
 
-    // Create a URL for the Blob
+    // URL for the Blob
     const url = URL.createObjectURL(blob);
 
-    // Create a download link and trigger the click event
+    // download link and trigger the click event
     const a = document.createElement("a");
     a.href = url;
     a.download = "code.html";
@@ -114,7 +114,7 @@ function App(props) {
   style={{
     borderBottomRightRadius: '.5rem',
     borderBottomLeftRadius: '.5rem',
-  }} // Apply styles as an object
+  }}
 />
 
 

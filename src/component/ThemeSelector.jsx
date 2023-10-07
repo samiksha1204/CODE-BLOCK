@@ -10,7 +10,7 @@ export default function ThemeSelector(props) {
 
   return (
     <div className="theme-selector">
-      {/* Apply custom styles to the select element */}
+      
       <select
         value={selectedTheme}
         onChange={handleThemeChange}
