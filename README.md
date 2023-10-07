@@ -1,7 +1,24 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-![Screenshot 2023-10-01 162521](https://github.com/samiksha1204/code_editor/assets/102059617/fdd1d2b2-7c4a-4708-9e63-2e2e48ed3102)
+![code](https://github.com/samiksha1204/code_editor/assets/102059617/a80c6b6f-ad7e-484f-819e-aeb6f98cdd8f)
+
+### Features
+
+- Edit HTML, CSS, and JavaScript code simultaneously.
+- Real-time preview of the code output.
+- Save the output as an HTML file.
+- Save the code as an HTML,CSS,JAVASCRIPT FILE
+- Refresh the code output.
+- Various themes for code editor.
+- Responsive layout for various screen sizes.
+
+### Technologies Used
+
+- React.js
+- Codemirror
+- Font Awesome
+- CSS for styling
 
 ## Available Scripts
 
